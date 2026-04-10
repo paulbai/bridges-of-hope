@@ -1499,7 +1499,15 @@ export default function Home() {
               reserved.
             </p>
             <p className="text-white/20 text-xs">
-              Built with purpose. Designed with heart.
+              A CSR of{" "}
+              <a
+                href="https://www.flotme.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/40 hover:text-gold transition-colors duration-300 underline underline-offset-2"
+              >
+                Flot
+              </a>
             </p>
           </div>
         </div>
