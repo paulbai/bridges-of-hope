@@ -18,13 +18,14 @@ export interface CauseDetail {
   beneficiaries: string;
   milestones: string[];
   impact: string[];
+  flotMerchant: string;
 }
 
 interface CauseDetailModalProps {
   isOpen: boolean;
   onClose: () => void;
   cause: CauseDetail | null;
-  onDonate: (causeName: string) => void;
+  onDonate: (causeName: string, flotMerchant?: string) => void;
 }
 
 export function CauseDetailModal({
@@ -193,7 +194,7 @@ export function CauseDetailModal({
               <div className="border-t border-outline/10 p-5 sm:p-6 bg-white shrink-0">
                 <button
                   onClick={() => {
-                    onDonate(cause.title);
+                    onDonate(cause.title, cause.flotMerchant);
                     onClose();
                   }}
                   className="w-full py-4 bg-gold text-navy-dark rounded-xl font-bold text-lg hover:bg-gold-bright transition-all duration-300 cursor-pointer flex items-center justify-center gap-3"

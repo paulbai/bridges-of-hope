@@ -8,7 +8,7 @@ interface DonateModalProps {
   isOpen: boolean;
   onClose: () => void;
   causeName: string;
-  organizationName?: string;
+  flotMerchant?: string;
 }
 
 const presetAmounts = [10, 25, 50, 100, 250, 500];
@@ -17,6 +17,7 @@ export function DonateModal({
   isOpen,
   onClose,
   causeName,
+  flotMerchant,
 }: DonateModalProps) {
   const [loading, setLoading] = useState(true);
   const [step, setStep] = useState<"amount" | "checkout">("amount");
@@ -72,8 +73,11 @@ export function DonateModal({
 
   const donationAmount = parseFloat(amount) || 0;
 
+  // Use the cause's own Flot merchant name so their name shows on checkout
+  const merchantName = flotMerchant || causeName;
+
   const checkoutUrl = `https://pay.flotme.ai/pay?${new URLSearchParams({
-    organization: causeName,
+    organization: merchantName,
     cause: causeName,
     ...(donationAmount > 0 ? { amount: donationAmount.toString() } : {}),
   }).toString()}`;

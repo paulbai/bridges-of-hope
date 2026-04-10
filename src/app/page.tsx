@@ -245,6 +245,7 @@ function BentoCard({
   imgAlt,
   delay,
   onDonate,
+  flotMerchant,
   onClick,
   className = "",
   featured = false,
@@ -257,7 +258,8 @@ function BentoCard({
   imgSrc: string;
   imgAlt: string;
   delay: number;
-  onDonate: (causeName: string) => void;
+  onDonate: (causeName: string, flotMerchant?: string) => void;
+  flotMerchant?: string;
   onClick?: () => void;
   className?: string;
   featured?: boolean;
@@ -322,7 +324,7 @@ function BentoCard({
               <span className="text-white font-semibold">{raised}</span> of {goal}
             </span>
             <button
-              onClick={(e) => { e.stopPropagation(); onDonate(title); }}
+              onClick={(e) => { e.stopPropagation(); onDonate(title, flotMerchant); }}
               className={`bg-gold text-navy-dark font-bold rounded-full hover:bg-gold-bright transition-all duration-300 hover:scale-[0.97] cursor-pointer ${featured ? "px-6 py-2.5 text-sm" : "px-4 py-2 text-xs"}`}
             >
               Donate
@@ -342,13 +344,15 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [donateModalOpen, setDonateModalOpen] = useState(false);
   const [donateCause, setDonateCause] = useState("");
+  const [donateMerchant, setDonateMerchant] = useState("");
   const [showAllPrograms, setShowAllPrograms] = useState(false);
   const [causeDetailOpen, setCauseDetailOpen] = useState(false);
   const [selectedCause, setSelectedCause] = useState<CauseDetail | null>(null);
   const [faqModalOpen, setFaqModalOpen] = useState(false);
 
-  const openDonateModal = (causeName: string) => {
+  const openDonateModal = (causeName: string, flotMerchant?: string) => {
     setDonateCause(causeName);
+    setDonateMerchant(flotMerchant || causeName);
     setDonateModalOpen(true);
   };
 
@@ -383,6 +387,7 @@ export default function Home() {
         "4 districts covered",
         "32 wells built and maintained",
       ],
+      flotMerchant: "Clean Water Initiative",
       className: "md:col-span-2 md:row-span-2",
       featured: true,
     },
@@ -410,6 +415,7 @@ export default function Home() {
         "24 villages reached",
         "120 students passed national exams",
       ],
+      flotMerchant: "Education for All",
       className: "md:col-span-2",
     },
     {
@@ -436,6 +442,7 @@ export default function Home() {
         "40% reduction in maternal mortality",
         "12 clinics equipped",
       ],
+      flotMerchant: "Maternal Health SL",
       className: "md:col-span-1",
     },
     {
@@ -462,6 +469,7 @@ export default function Home() {
         "6 disaster responses in 2025",
         "200+ trained volunteers",
       ],
+      flotMerchant: "Emergency Relief SL",
       className: "md:col-span-1",
     },
     {
@@ -488,6 +496,7 @@ export default function Home() {
         "3 training centers",
         "$50k in micro-grants awarded",
       ],
+      flotMerchant: "Youth Skills SL",
       className: "md:col-span-2",
     },
     {
@@ -514,6 +523,7 @@ export default function Home() {
         "8 seed banks operational",
         "120 hectares irrigated",
       ],
+      flotMerchant: "Sustainable Agriculture SL",
       className: "md:col-span-1",
     },
     {
@@ -540,6 +550,7 @@ export default function Home() {
         "30 green jobs created",
         "150 tonnes CO2 saved yearly",
       ],
+      flotMerchant: "Solar for Schools SL",
       className: "md:col-span-1",
     },
   ];
@@ -964,6 +975,7 @@ export default function Home() {
                 imgAlt={program.imgAlt}
                 delay={i}
                 onDonate={openDonateModal}
+                flotMerchant={program.flotMerchant}
                 onClick={() => openCauseDetail(program)}
                 className={program.className}
                 featured={program.featured}
@@ -1512,6 +1524,7 @@ export default function Home() {
         isOpen={donateModalOpen}
         onClose={() => setDonateModalOpen(false)}
         causeName={donateCause}
+        flotMerchant={donateMerchant}
       />
     </>
   );
