@@ -364,30 +364,30 @@ export default function Home() {
   /* ── Programs Data ── */
   const allPrograms: (CauseDetail & { className: string; featured?: boolean })[] = [
     {
-      title: "Clean Water Initiative",
-      description: "Building sustainable wells and filtration systems across 50 communities in rural Sierra Leone.",
-      longDescription: "Access to clean water is a fundamental human right, yet thousands of communities in Sierra Leone still rely on contaminated water sources. Our Clean Water Initiative is constructing deep borehole wells equipped with hand pumps and solar-powered filtration systems across 50 rural communities. Each well serves 300 to 500 people and is maintained by trained local water committees. We partner with hydrogeologists to identify sustainable aquifer sources and use durable materials rated for 20+ years of service. Beyond construction, we run hygiene education workshops to maximize health outcomes.",
+      title: "Chimpanzee Rescue & Rehabilitation",
+      description: "Rescuing orphaned and injured chimpanzees and rehabilitating them for eventual release into protected forests.",
+      longDescription: "Bridges of Hope is West Africa's leading chimpanzee rescue and rehabilitation centre, located in the Western Area Peninsula National Park near Freetown, Sierra Leone. We rescue orphaned, abandoned, and confiscated chimpanzees — victims of the illegal pet and bushmeat trades — and provide them with veterinary care, socialization, and a path to recovery. Our rehabilitation program gradually reintroduces chimps to semi-wild enclosures within the rainforest, preparing them for eventual release. Each chimp receives individualized care from trained keepers and veterinarians, with the goal of restoring natural behaviors and social bonds.",
       raised: "$75,400",
       goal: "$100k",
       percent: 75,
-      imgSrc: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80",
-      imgAlt: "African children collecting clean water from a community well",
-      location: "Rural Sierra Leone",
+      imgSrc: "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1200&q=80",
+      imgAlt: "Chimpanzee at Tacugama Sanctuary in Sierra Leone",
+      location: "Western Area Peninsula, Sierra Leone",
       startDate: "2025",
-      beneficiaries: "25,000+ people",
+      beneficiaries: "100+ rescued chimpanzees",
       milestones: [
-        "32 wells completed and operational across 4 districts",
-        "Water quality testing passed in all active sites",
-        "150 local water committee members trained",
-        "Waterborne disease reduced by 60% in target communities",
+        "105 chimpanzees currently in care across multiple enclosures",
+        "Veterinary clinic fully equipped for primate healthcare",
+        "12 trained chimpanzee keepers on staff",
+        "3 chimpanzees successfully reintroduced to protected forest",
       ],
       impact: [
-        "25,000+ people with clean water access",
-        "60% reduction in waterborne illness",
-        "4 districts covered",
-        "32 wells built and maintained",
+        "100+ chimpanzees rescued and rehabilitated",
+        "12 full-time keepers employed",
+        "3 successful reintroductions",
+        "24/7 veterinary care provided",
       ],
-      flotMerchant: "Clean Water Initiative",
+      flotMerchant: "Chimpanzee Rescue",
       className: "md:col-span-2 md:row-span-2",
       featured: true,
     },
@@ -677,8 +677,8 @@ export default function Home() {
         {/* Background Image with Parallax */}
         <motion.div style={{ y: heroImgY }} className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1920&q=80"
-            alt="African children smiling together in warm sunlight"
+            src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1200&q=80"
+            alt="Chimpanzee at Tacugama Sanctuary in Sierra Leone"
             className="w-full h-[120%] object-cover"
           />
           <div className="absolute inset-0 hero-gradient opacity-75" />
