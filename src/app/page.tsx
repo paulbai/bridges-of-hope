@@ -345,7 +345,6 @@ export default function Home() {
   const [donateModalOpen, setDonateModalOpen] = useState(false);
   const [donateCause, setDonateCause] = useState("");
   const [donateMerchant, setDonateMerchant] = useState("");
-  const [showAllPrograms, setShowAllPrograms] = useState(false);
   const [causeDetailOpen, setCauseDetailOpen] = useState(false);
   const [selectedCause, setSelectedCause] = useState<CauseDetail | null>(null);
   const [faqModalOpen, setFaqModalOpen] = useState(false);
@@ -364,194 +363,86 @@ export default function Home() {
   /* ── Programs Data ── */
   const allPrograms: (CauseDetail & { className: string; featured?: boolean })[] = [
     {
-      title: "Chimpanzee Rescue & Rehabilitation",
+      title: "Tacugama Chimpanzee Sanctuary",
       description: "Rescuing orphaned and injured chimpanzees and rehabilitating them for eventual release into protected forests.",
-      longDescription: "Bridges of Hope is West Africa's leading chimpanzee rescue and rehabilitation centre, located in the Western Area Peninsula National Park near Freetown, Sierra Leone. We rescue orphaned, abandoned, and confiscated chimpanzees — victims of the illegal pet and bushmeat trades — and provide them with veterinary care, socialization, and a path to recovery. Our rehabilitation program gradually reintroduces chimps to semi-wild enclosures within the rainforest, preparing them for eventual release. Each chimp receives individualized care from trained keepers and veterinarians, with the goal of restoring natural behaviors and social bonds.",
-      raised: "$75,400",
-      goal: "$100k",
-      percent: 75,
+      longDescription: "Founded in 1995 by Bala Amarasekaran, Tacugama Chimpanzee Sanctuary is the only chimpanzee rescue and rehabilitation centre in Sierra Leone. Located inside the Western Area Peninsula National Park just outside Freetown, the sanctuary cares for over 100 chimpanzees rescued from the illegal pet and bushmeat trades. Each chimpanzee goes through a carefully managed rehabilitation process — from quarantine and veterinary care, through gradual socialization with other chimps, to eventual life in large forested enclosures. Beyond rescue, Tacugama leads national conservation efforts: protecting the park's rainforest, running community outreach programs, training eco-guards, and advocating for the chimpanzee as Sierra Leone's national animal. Your donation funds food, medical care, keeper salaries, and forest protection.",
+      raised: "$0",
+      goal: "$10k",
+      percent: 0,
       imgSrc: "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1200&q=80",
       imgAlt: "Chimpanzee at Tacugama Sanctuary in Sierra Leone",
-      location: "Western Area Peninsula, Sierra Leone",
-      startDate: "2025",
+      location: "Western Area Peninsula National Park, Sierra Leone",
+      startDate: "1995",
       beneficiaries: "100+ rescued chimpanzees",
       milestones: [
-        "105 chimpanzees currently in care across multiple enclosures",
-        "Veterinary clinic fully equipped for primate healthcare",
-        "12 trained chimpanzee keepers on staff",
-        "3 chimpanzees successfully reintroduced to protected forest",
+        "Over 100 chimpanzees rescued and rehabilitated since 1995",
+        "Operates the only chimpanzee sanctuary in Sierra Leone",
+        "Co-manages the Western Area Peninsula National Park",
+        "Chimpanzee declared Sierra Leone's national animal in 2019",
       ],
       impact: [
-        "100+ chimpanzees rescued and rehabilitated",
-        "12 full-time keepers employed",
-        "3 successful reintroductions",
-        "24/7 veterinary care provided",
+        "100+ chimpanzees in lifelong care",
+        "17,000+ hectares of rainforest protected",
+        "30+ local staff employed full-time",
+        "Year-round community conservation outreach",
       ],
-      flotMerchant: "Chimpanzee Rescue",
+      flotMerchant: "Tacugama Chimpanzee Sanctuary",
       className: "md:col-span-2 md:row-span-2",
       featured: true,
     },
     {
-      title: "Education for All",
-      description: "Mobile classrooms with satellite internet for remote communities.",
-      longDescription: "In remote regions of Sierra Leone, children walk hours to reach the nearest school, if one exists at all. Our Education for All program deploys mobile classroom units equipped with satellite internet, solar power, tablets, and trained facilitators. Each unit serves 3 to 5 villages on a rotating schedule, bringing quality primary and secondary education directly to underserved communities. Our curriculum blends Sierra Leone's national syllabus with digital literacy, ensuring students are prepared for both local opportunities and the global economy.",
-      raised: "$25,000",
-      goal: "$50k",
-      percent: 50,
-      imgSrc: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
-      imgAlt: "Students learning together in a classroom",
-      location: "Northern & Eastern Provinces",
-      startDate: "2025",
-      beneficiaries: "3,200+ students",
+      title: "Ballanta Academy of Music",
+      description: "Formal music education for Sierra Leonean youth — theory, performance, and cultural heritage.",
+      longDescription: "Named after the pioneering Sierra Leonean musicologist Nicholas G. J. Ballanta, the Ballanta Academy of Music in Freetown has been shaping the country's musical future since 1996. The academy offers structured training in classical and African music traditions — piano, violin, guitar, voice, drums, music theory, composition, and ensemble performance — to children and young adults, many from low-income backgrounds. Alongside its instructional programs, Ballanta hosts concerts, runs an annual music festival, and preserves Sierra Leone's rich musical heritage through research and publications. Donations support scholarships, instruments, and teacher salaries, opening the doors of music education to students who would otherwise have no access.",
+      raised: "$0",
+      goal: "$10k",
+      percent: 0,
+      imgSrc: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?w=800&q=80",
+      imgAlt: "Young student learning music",
+      location: "Freetown, Sierra Leone",
+      startDate: "1996",
+      beneficiaries: "Hundreds of student musicians",
       milestones: [
-        "8 mobile classroom units deployed",
-        "Partnered with 24 rural villages",
-        "95% student attendance rate maintained",
-        "First cohort of 120 students passed national exams",
+        "Founded in 1996 in honor of Nicholas G. J. Ballanta",
+        "Graduated hundreds of musicians into local and international careers",
+        "Hosts the annual Ballanta Music Festival",
+        "Curriculum blending Western classical and African musical traditions",
       ],
       impact: [
-        "3,200+ students enrolled",
-        "95% attendance rate",
-        "24 villages reached",
-        "120 students passed national exams",
+        "Scholarships for underprivileged youth",
+        "Instruments provided to students in need",
+        "Preservation of Sierra Leonean musical heritage",
+        "Pathway to national and international music careers",
       ],
-      flotMerchant: "Education for All",
+      flotMerchant: "Ballanta Academy of Music",
       className: "md:col-span-2",
     },
     {
-      title: "Maternal Health",
-      description: "Training midwives and equipping clinics in Freetown.",
-      longDescription: "Sierra Leone has one of the highest maternal mortality rates in the world. Our Maternal Health program addresses this crisis by training community midwives, equipping peripheral health units with essential supplies, and establishing emergency referral networks. We provide prenatal care kits, safe delivery supplies, and postnatal follow-up services. Each trained midwife serves a catchment area of 1,000 to 2,000 people, dramatically improving outcomes for mothers and newborns in communities that previously had zero access to skilled birth attendants.",
-      raised: "$42,000",
-      goal: "$60k",
-      percent: 70,
-      imgSrc: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80",
-      imgAlt: "Healthcare worker caring for a mother and newborn",
-      location: "Freetown & Western Area",
-      startDate: "2025",
-      beneficiaries: "8,500+ mothers",
+      title: "The Goodwill Children Foundation Sierra Leone",
+      description: "Care, education, and healthcare for orphaned and vulnerable children across Sierra Leone.",
+      longDescription: "The Goodwill Children Foundation Sierra Leone is a grassroots nonprofit dedicated to transforming the lives of orphaned, abandoned, and vulnerable children. The foundation provides safe shelter, nutritious meals, school fees, uniforms, and learning materials, alongside access to basic healthcare and psychosocial support. Its programs go beyond immediate relief — focusing on long-term outcomes like keeping children in school, supporting single-parent households, and equipping young people with skills for adulthood. With a small but committed local team, every dollar goes further on the ground. Your donation helps feed a child, keep them in school, or cover a critical medical bill.",
+      raised: "$0",
+      goal: "$10k",
+      percent: 0,
+      imgSrc: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
+      imgAlt: "Children smiling together in Sierra Leone",
+      location: "Sierra Leone",
+      startDate: "Active",
+      beneficiaries: "Orphaned & vulnerable children",
       milestones: [
-        "45 community midwives trained and certified",
-        "12 health clinics equipped with delivery supplies",
-        "Emergency referral network covering 3 districts",
-        "Maternal mortality reduced by 40% in target areas",
+        "Supports orphaned and vulnerable children across Sierra Leone",
+        "School fees, uniforms, and learning materials provided",
+        "Nutrition, shelter, and healthcare support",
+        "Community-based model with local Sierra Leonean leadership",
       ],
       impact: [
-        "8,500+ mothers received care",
-        "45 midwives trained",
-        "40% reduction in maternal mortality",
-        "12 clinics equipped",
+        "Children kept in school",
+        "Meals and shelter for vulnerable kids",
+        "Access to basic healthcare",
+        "Psychosocial and community support",
       ],
-      flotMerchant: "Maternal Health SL",
-      className: "md:col-span-1",
-    },
-    {
-      title: "Emergency Relief",
-      description: "Rapid response supplies for flood and disaster recovery zones.",
-      longDescription: "Sierra Leone is highly vulnerable to flooding, landslides, and seasonal disasters that displace thousands of families each year. Our Emergency Relief program maintains pre-positioned supply caches in strategic locations, enabling 48-hour response times. We provide emergency shelter kits, clean water purification tablets, food rations, medical supplies, and psychosocial support. Our trained rapid-response volunteers are embedded in at-risk communities, ensuring aid reaches the most vulnerable families first. Post-disaster, we support communities in rebuilding with disaster-resilient techniques.",
-      raised: "$180,000",
-      goal: "$200k",
-      percent: 90,
-      imgSrc: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80",
-      imgAlt: "Volunteers distributing emergency aid packages",
-      location: "Nationwide",
-      startDate: "2025",
-      beneficiaries: "15,000+ displaced people",
-      milestones: [
-        "6 emergency responses deployed in 2025",
-        "15,000+ people received immediate aid",
-        "5 supply cache locations established",
-        "200+ rapid-response volunteers trained",
-      ],
-      impact: [
-        "15,000+ people aided",
-        "48-hour average response time",
-        "6 disaster responses in 2025",
-        "200+ trained volunteers",
-      ],
-      flotMerchant: "Emergency Relief SL",
-      className: "md:col-span-1",
-    },
-    {
-      title: "Youth Skills & Training",
-      description: "Vocational training in tech, carpentry, and tailoring for 500+ young Sierra Leoneans per year.",
-      longDescription: "Youth unemployment in Sierra Leone exceeds 60%, creating a cycle of poverty and instability. Our Youth Skills & Training program breaks this cycle by providing hands-on vocational training in high-demand fields: technology and coding, carpentry and construction, tailoring and fashion design, and small business management. Each 6-month cohort receives mentorship, tools, and micro-grants to launch their own enterprises. We partner with local businesses for apprenticeships and job placements, ensuring graduates have real pathways to sustainable employment.",
-      raised: "$38,200",
-      goal: "$75k",
-      percent: 51,
-      imgSrc: "https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=800&q=80",
-      imgAlt: "Young African people in a vocational training workshop",
-      location: "Freetown & Bo",
-      startDate: "2025",
-      beneficiaries: "500+ youth per year",
-      milestones: [
-        "3 training centers operational in Freetown and Bo",
-        "First cohort of 180 graduates employed or self-employed",
-        "Partnerships with 25 local businesses for apprenticeships",
-        "$50k in micro-grants distributed to graduate entrepreneurs",
-      ],
-      impact: [
-        "500+ youth trained annually",
-        "78% employment rate post-graduation",
-        "3 training centers",
-        "$50k in micro-grants awarded",
-      ],
-      flotMerchant: "Youth Skills SL",
+      flotMerchant: "Goodwill Children Foundation",
       className: "md:col-span-2",
-    },
-    {
-      title: "Sustainable Agriculture",
-      description: "Seed banks and irrigation for smallholder farming families.",
-      longDescription: "Agriculture employs over 60% of Sierra Leone's workforce, yet most smallholder farmers struggle with poor yields due to lack of quality seeds, irrigation, and modern techniques. Our Sustainable Agriculture program establishes community seed banks with drought-resistant and high-yield varieties, builds low-cost drip irrigation systems, and trains farmers in climate-smart practices. We also connect farmers to markets through cooperative networks, helping them earn fair prices for their produce. Each seed bank serves 200 to 400 farming families and is managed by elected community committees.",
-      raised: "$19,800",
-      goal: "$40k",
-      percent: 49,
-      imgSrc: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&q=80",
-      imgAlt: "Farmers working in green agricultural fields",
-      location: "Kailahun & Kenema Districts",
-      startDate: "2025",
-      beneficiaries: "2,400+ farming families",
-      milestones: [
-        "8 community seed banks established",
-        "120 hectares under drip irrigation",
-        "Crop yields increased by 45% on average",
-        "3 farmer cooperatives formed for market access",
-      ],
-      impact: [
-        "2,400+ families supported",
-        "45% average yield increase",
-        "8 seed banks operational",
-        "120 hectares irrigated",
-      ],
-      flotMerchant: "Sustainable Agriculture SL",
-      className: "md:col-span-1",
-    },
-    {
-      title: "Solar for Schools",
-      description: "Installing solar panels to power rural schools and health clinics.",
-      longDescription: "Over 80% of rural schools and health clinics in Sierra Leone lack reliable electricity, limiting learning hours and medical care to daylight. Our Solar for Schools program installs rooftop solar panel systems with battery storage, providing clean, reliable power for lighting, computers, medical equipment, and phone charging stations. Each installation is designed to last 25+ years with minimal maintenance. We train local technicians to maintain the systems, creating green jobs while ensuring long-term sustainability. Powered schools extend learning by 3 to 4 hours daily.",
-      raised: "$62,000",
-      goal: "$80k",
-      percent: 77,
-      imgSrc: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80",
-      imgAlt: "Solar panel installation on a rural building",
-      location: "Bombali & Tonkolili Districts",
-      startDate: "2025",
-      beneficiaries: "18,000+ students & patients",
-      milestones: [
-        "42 schools and 15 clinics now solar-powered",
-        "Extended learning hours by 3 to 4 hours daily",
-        "30 local solar technicians trained and employed",
-        "150 tonnes of CO2 emissions avoided annually",
-      ],
-      impact: [
-        "57 installations completed",
-        "18,000+ people benefiting",
-        "30 green jobs created",
-        "150 tonnes CO2 saved yearly",
-      ],
-      flotMerchant: "Solar for Schools SL",
-      className: "md:col-span-1",
     },
   ];
 
@@ -573,9 +464,8 @@ export default function Home() {
 
   const navLinks = [
     { label: "Our Mission", href: "#mission" },
-    { label: "Verified Impact", href: "#impact" },
     { label: "Programs", href: "#programs" },
-    { label: "Stories", href: "#stories" },
+    { label: "Partner With Us", href: "#join" },
   ];
 
   return (
@@ -834,10 +724,17 @@ export default function Home() {
                 className="text-text-secondary text-lg leading-relaxed mb-10"
               >
                 Every donation on Bridges of Hope is processed through{" "}
-                <strong className="text-navy">Flot Checkout</strong> &ndash; a
-                modern payment gateway built for African businesses. Accept Visa,
-                Mastercard, Mobile Money, and more with PCI-DSS compliant
-                security.
+                <a
+                  href="https://www.flotme.ai/business"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-teal hover:text-navy underline underline-offset-2 transition-colors duration-300"
+                >
+                  Flot Checkout
+                </a>{" "}
+                &ndash; a modern payment gateway built for African businesses.
+                Accept Visa, Mastercard, Mobile Money, and more with PCI-DSS
+                compliant security.
               </motion.p>
 
               <div className="space-y-8">
@@ -939,27 +836,11 @@ export default function Home() {
                 Choose a cause and make a verified impact in Sierra Leone.
               </motion.p>
             </div>
-            <motion.button
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={2}
-              onClick={() => setShowAllPrograms(!showAllPrograms)}
-              className="text-teal font-bold flex items-center gap-2 hover:gap-3 transition-all duration-300 cursor-pointer group"
-            >
-              {showAllPrograms ? "Show Less" : "View All Programs"}
-              {showAllPrograms ? (
-                <ChevronUp size={18} className="transition-transform duration-300" />
-              ) : (
-                <ChevronDown size={18} className="transition-transform duration-300 group-hover:translate-y-0.5" />
-              )}
-            </motion.button>
           </div>
 
           {/* Bento Grid */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5 auto-rows-[280px]">
-            {(showAllPrograms ? allPrograms : allPrograms.slice(0, 4)).map((program, i) => (
+            {allPrograms.map((program, i) => (
               <BentoCard
                 key={program.title}
                 title={program.title}
@@ -979,203 +860,9 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Expand indicator when collapsed */}
-          {!showAllPrograms && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mt-10 text-center"
-            >
-              <button
-                onClick={() => setShowAllPrograms(true)}
-                className="inline-flex items-center gap-2 text-teal font-bold text-lg hover:gap-3 transition-all duration-300 cursor-pointer group"
-              >
-                Show {allPrograms.length - 4} More Programs
-                <ChevronDown size={20} className="transition-transform duration-300 group-hover:translate-y-1" />
-              </button>
-            </motion.div>
-          )}
         </div>
       </RevealSection>
 
-      {/* ───── IMPACT STATS ───── */}
-      <section
-        className="relative py-28 lg:py-36 hero-gradient overflow-hidden"
-        id="impact"
-      >
-        {/* Decorative elements */}
-        <div className="absolute inset-0 noise-overlay" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-teal/5 blur-3xl -translate-y-1/2 translate-x-1/4" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-gold/5 blur-3xl translate-y-1/2 -translate-x-1/4" />
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
-              Our Collective Impact
-            </h2>
-            <p className="text-white/50 text-lg max-w-xl mx-auto">
-              Every number represents a life changed, a community uplifted.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Users,
-                target: 12,
-                suffix: "M+",
-                prefix: "",
-                label: "Total Lives Impacted",
-              },
-              {
-                icon: Target,
-                target: 450,
-                suffix: "",
-                prefix: "",
-                label: "Verified Programs",
-              },
-              {
-                icon: Heart,
-                target: 24,
-                suffix: "M+",
-                prefix: "$",
-                label: "Total Donations",
-              },
-            ].map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={i}
-                className="relative text-center p-10 lg:p-12 group"
-              >
-                {/* Divider between items */}
-                {i < 2 && (
-                  <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-20 w-px bg-white/10" />
-                )}
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-gold/10 group-hover:border-gold/30 transition-all duration-500">
-                  <stat.icon size={28} className="text-gold" />
-                </div>
-                <h3 className="text-5xl lg:text-6xl font-serif font-bold text-white mb-3">
-                  <AnimatedCounter
-                    target={stat.target}
-                    prefix={stat.prefix}
-                    suffix={stat.suffix}
-                    duration={2}
-                  />
-                </h3>
-                <p className="text-white/50 text-lg">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ───── TESTIMONIALS / STORIES ───── */}
-      <section className="py-28 lg:py-36 bg-surface" id="stories">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Section Header */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <span className="inline-flex items-center gap-2 bg-gold/20 text-gold-deep font-bold text-xs tracking-widest uppercase px-4 py-2 rounded-full mb-8">
-              Success Stories
-            </span>
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-navy mb-4">
-              Voices of Impact
-            </h2>
-            <p className="text-text-secondary text-lg max-w-xl mx-auto">
-              Hear from the people and organizations whose lives have been transformed.
-            </p>
-          </motion.div>
-
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                quote: "Bridges of Hope didn\u2019t just fund our water project \u2013 they walked alongside us, verifying every milestone. For the first time, our donors could see exactly where their generosity landed.",
-                name: "Dr. Aminata Koroma",
-                role: "Director, AquaLife Foundation \u2013 Sierra Leone",
-                imgSrc: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&q=80",
-                featured: true,
-              },
-              {
-                quote: "As a small NGO, we struggled to gain donor trust. After Bridges of Hope verified our education program, donations increased by 300% in just three months. Their stamp of credibility changed everything for us.",
-                name: "Ibrahim Sesay",
-                role: "Founder, Freetown Scholars Initiative",
-                imgSrc: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80",
-                featured: false,
-              },
-              {
-                quote: "I donated $50 expecting nothing more than a thank-you email. Instead, I received photo updates, GPS-tagged progress reports, and a video of the solar panel being installed at the school. This is what giving should feel like.",
-                name: "Sarah Mitchell",
-                role: "Donor from London, UK",
-                imgSrc: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80",
-                featured: false,
-              },
-              {
-                quote: "Our youth training centre was running on fumes before Bridges of Hope stepped in. They didn\u2019t just bring funding \u2013 they brought a system: verified milestones, transparent reporting, and a community of donors who genuinely care about our graduates\u2019 futures.",
-                name: "Mariama Bangura",
-                role: "Programme Lead, Bo Youth Empowerment Hub",
-                imgSrc: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=100&q=80",
-                featured: true,
-              },
-            ].map((testimonial, i) => (
-              <motion.div
-                key={testimonial.name}
-                variants={fadeUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                custom={i}
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-                className={`relative bg-surface-card rounded-2xl p-8 lg:p-10 shadow-ambient hover:shadow-ambient-lg transition-shadow duration-500 ${
-                  testimonial.featured ? "md:row-span-1" : ""
-                }`}
-              >
-                {/* Quote Icon */}
-                <Quote size={32} className="text-gold/30 mb-6" />
-
-                {/* Quote Text */}
-                <p className="text-navy text-lg lg:text-xl font-serif leading-relaxed mb-8 italic">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-
-                {/* Author */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-teal/20 shrink-0">
-                    <img
-                      src={testimonial.imgSrc}
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-bold text-navy text-sm">{testimonial.name}</p>
-                    <p className="text-text-muted text-xs">{testimonial.role}</p>
-                  </div>
-                </div>
-
-                {/* Decorative corner accent */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-teal-muted/10 to-transparent rounded-tr-2xl" />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ───── GET VERIFIED & JOIN ───── */}
       <section className="py-28 lg:py-36 bg-surface-dim" id="join">
