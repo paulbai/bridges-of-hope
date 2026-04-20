@@ -703,7 +703,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 text-gold text-sm font-semibold tracking-wide"
             >
               <Globe size={16} />
-              Verified Humanitarian Impact Since 2025
+              Verified Humanitarian Impact Since 2026
             </motion.div>
 
             {/* Headline */}
@@ -768,10 +768,6 @@ export default function Home() {
               <div className="flex items-center gap-2 text-white/50 text-sm">
                 <CheckCircle2 size={18} className="text-teal-muted" />
                 <span>Flot Verified</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/50 text-sm">
-                <Heart size={18} className="text-teal-muted" />
-                <span>1.2M+ Lives Impacted</span>
               </div>
             </motion.div>
           </div>
