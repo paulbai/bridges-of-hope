@@ -1047,7 +1047,7 @@ export default function Home() {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="mt-6 bg-white p-5 rounded-2xl shadow-ambient-lg flex items-center gap-4"
               >
-                <p className="font-serif font-bold text-3xl text-navy shrink-0">30+</p>
+                <p className="font-serif font-bold text-3xl text-navy shrink-0">3</p>
                 <p className="text-text-secondary text-xs leading-relaxed">
                   Verified organizations already receiving donations through our platform.
                 </p>
