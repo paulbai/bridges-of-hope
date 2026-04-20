@@ -677,8 +677,8 @@ export default function Home() {
         {/* Background Image with Parallax */}
         <motion.div style={{ y: heroImgY }} className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=1200&q=80"
-            alt="Chimpanzee at Tacugama Sanctuary in Sierra Leone"
+            src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1920&q=80"
+            alt="African children smiling together in warm sunlight"
             className="w-full h-[120%] object-cover"
           />
           <div className="absolute inset-0 hero-gradient opacity-75" />
