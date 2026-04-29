@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -32,7 +33,13 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${manrope.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className="min-h-full flex flex-col antialiased">
+        {children}
+        <Script
+          src="https://flot-dashboard.vercel.app/api/public/tracker.js?id=fdb1f101-4c63-4e5e-8bb1-e5f4ad2bac65"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }
