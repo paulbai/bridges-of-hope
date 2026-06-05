@@ -1099,8 +1099,8 @@ export default function HomeClient({ programs }: { programs: ProgramInput[] }) {
           {/* Bottom */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/30 text-sm">
-              &copy; 2026 Bridges of Hope. Verified by Flot. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} Bridges of Hope. Verified by Flot.
+              All rights reserved.
             </p>
             <p className="text-white/20 text-xs">
               A CSR of{" "}
