@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col antialiased">
         {children}
         <Script
-          src="https://flot-dashboard.vercel.app/api/public/tracker.js?id=fdb1f101-4c63-4e5e-8bb1-e5f4ad2bac65"
+          src="https://dashboard.flotme.ai/api/public/tracker.js?id=fdb1f101-4c63-4e5e-8bb1-e5f4ad2bac65"
           strategy="afterInteractive"
         />
       </body>
